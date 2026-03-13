@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Youssef's Quiz</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="quiz-section">
+    <div class="quiz-header">
+      <h1 class="quiz-title">YOUSSEF'S QUIZ</h1>
+      <p class="quiz-sub">HOW WELL DO YOU KNOW HIM? 🌙</p>
+    </div>
+
+    <div class="quiz-questions">
+
+      <div class="q-card">
+        <p class="q-label"><span class="q-num">01</span>WHAT'S YOUSSEF'S FAVOURITE HOBBY?</p>
+        <div class="options" id="q1">
+          <button class="opt" data-val="reading" onclick="pick(this,'q1')">READING</button>
+          <button class="opt" data-val="sports"  onclick="pick(this,'q1')">SPORTS</button>
+          <button class="opt" data-val="cooking" onclick="pick(this,'q1')">COOKING</button>
+          <button class="opt" data-val="gaming"  onclick="pick(this,'q1')">GAMING</button>
+        </div>
+      </div>
+
+      <div class="q-card">
+        <p class="q-label"><span class="q-num">02</span>WHAT'S HIS FAVOURITE SEASON?</p>
+        <div class="options" id="q2">
+          <button class="opt" data-val="spring" onclick="pick(this,'q2')">SPRING</button>
+          <button class="opt" data-val="summer" onclick="pick(this,'q2')">SUMMER</button>
+          <button class="opt" data-val="autumn" onclick="pick(this,'q2')">AUTUMN</button>
+          <button class="opt" data-val="winter" onclick="pick(this,'q2')">WINTER</button>
+        </div>
+      </div>
+
+      <div class="q-card">
+        <p class="q-label"><span class="q-num">03</span>NIGHT OWL OR MORNING BIRD?</p>
+        <div class="options" id="q3">
+          <button class="opt" data-val="morning" onclick="pick(this,'q3')">MORNING PERSON</button>
+          <button class="opt" data-val="night"   onclick="pick(this,'q3')">NIGHT PERSON</button>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="check-btn" onclick="checkQuiz()">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+        <path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+      </svg>
+      SEE MY RESULTS
+    </button>
+
+    <div class="result-card" id="result" style="display:none">
+      <div class="result-score" id="result-score"></div>
+      <p class="result-title" id="result-title"></p>
+      <p class="result-body"  id="result-body"></p>
+      <button class="retry-btn" onclick="retryQuiz()">TRY AGAIN</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
